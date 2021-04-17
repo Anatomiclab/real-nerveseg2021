@@ -1,0 +1,131 @@
+
+Accuracy: 0.8634
+
+Micro Precision: 0.8634
+Micro Recall: 0.8634
+Micro F1-score: 0.8634
+
+Macro Precision: 0.8724
+Macro Recall: 0.8193
+Macro F1-score: 0.8377
+
+Weighted Precision: 0.8662
+Weighted Recall: 0.8634
+Weighted F1-score: 0.8592
+
+Classification Report
+
+               precision    recall  f1-score   support
+
+        nerve       0.86      0.95      0.90      2857
+opening wound       0.85      0.86      0.85      1733
+       tendon       0.91      0.65      0.76      1149
+
+     accuracy                           0.86      5739
+    macro avg       0.87      0.82      0.84      5739
+ weighted avg       0.87      0.86      0.86      5739
+
+Matthew's coefficient is: 
+0.7784359752574181
+	
+True positive:
+[2727 1485  743]
+	
+True negative:
+[2434 3746 4514]
+	
+False positive:
+[448 260  76]
+	
+False negative:
+[130 248 406]
+Per class Matthews coefficient:	
+0.8036098544464254
+0.7904498149519776
+0.7208509809021987
+	
+
+
+nerve	opening wound	tendon
+
+Sensitivity, hit rate, recall, or true positive rate:	
+[0.95449772 0.85689556 0.64664926]
+	
+Specificity or true negative rate:	
+[0.84455239 0.93509735 0.98344227]
+	
+precision or positive predictive value:	
+[0.85889764 0.85100287 0.90720391]
+	
+Negative predictive value:	
+[0.94929797 0.93790686 0.91747967]
+	
+Accuracy:	
+[0.89928559 0.91148284 0.91601324]
+	
+F1 score positive(2*precision*specificity)/(precision+sensitivity)
+[0.9041777188328913, 0.853939045428407, 0.7550813008130082]
+	
+F1 score negative(2*NPV*specificity)/(NPV+specificity)
+[0.8938670583914801, 0.9365000000000001, 0.94931650893796]
+	
+
+
+
+
+Macro average metrics below
+
+
+
+	
+Macro Sensitivity, hit rate, recall, or true positive rate:	
+0.8193475139834604
+	
+Macro Specificity or true negative rate:	
+0.9210306713116561
+	
+Macro precision or positive predictive value:	
+0.8723681367762319
+	
+Macro Negative predictive value:	
+0.9348948356686867
+	
+Macro Accuracy:	
+0.9089272230934542
+	
+Macro F1 score positive(2*precision*specificity)/(precision+sensitivity)
+0.8377326883581023
+	
+Macro F1 score negative(2*NPV*specificity)/(NPV+specificity)
+0.9265611891098134
+	
+
+
+
+
+Micro average metrics below
+
+
+
+	
+micro Sensitivity, hit rate, recall, or true positive rate	:
+
+0.8633908346401812
+	
+micro Specificity or true negative rate:	
+0.9316954173200906
+	
+micro precision or positive predictive value:	
+0.8633908346401812
+	
+micro Negative predictive value:	
+0.9316954173200906
+	
+micro Accuracy:	
+0.9089272230934542
+	
+micro F1 score positive(2*precision*specificity)/(precision+sensitivity):	
+0.8633908346401812
+	
+micro F1 score negative(2*NPV*specificity)/(NPV+specificity):	
+0.9316954173200906
