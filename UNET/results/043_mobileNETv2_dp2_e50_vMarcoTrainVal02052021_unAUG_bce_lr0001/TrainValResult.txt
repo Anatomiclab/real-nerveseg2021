@@ -1,0 +1,14 @@
+evaluation result for Validation dataset, which has the size of 862:
+mean IOU: 0.6532407402992249
+Standard error of mean of IOU: 0.006938238033343119
+95% confidence interval of IOU is: (0.6396229006050802, 0.6668585799933695)
+mean dice: 0.7669345140457153
+Standard error of mean of dice: 0.006563924464193043
+95% confidence interval of dice is: (0.754051348220575, 0.7798176798708557)
+evaluation result for Training dataset, which has the size of 4024:
+mean IOU: 0.8006213903427124
+Standard error of mean of IOU: 0.0017933022520323888
+95% confidence interval of IOU is: (0.7971055247331353, 0.8041372559522895)
+mean dice: 0.8838818073272705
+Standard error of mean of dice: 0.0013629995812648103
+95% confidence interval of dice is: (0.8812095732695672, 0.8865540413849738)

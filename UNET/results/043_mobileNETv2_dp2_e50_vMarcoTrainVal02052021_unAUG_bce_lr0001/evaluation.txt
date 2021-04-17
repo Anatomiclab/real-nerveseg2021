@@ -1,0 +1,7 @@
+evaluation result for H:/FYP data/Marco_segmentation_alldata/TFrecord/test, which has the size of 862:
+mean IOU: 0.6715699434280396
+Standard error of mean of IOU: 0.006082261540287381
+95% confidence interval of IOU is: (0.6596321485245711, 0.683507738331508)
+mean dice: 0.7860314249992371
+Standard error of mean of dice: 0.005699456901145385
+95% confidence interval of dice is: (0.7748449695835403, 0.7972178804149338)
