@@ -54,12 +54,10 @@ During the training process, the images in the &quot;training and validation&quo
 
 The default location for the datasets are the subfolder &quot;/Classification/datasets/&quot;. The images has been compressed into a zip file for download, they should be decompressed before use.
 091810021113.zip can be downloaded here:
-[https://connectpolyu-my.sharepoint.com/:u:/r/personal/18041854r\_connect\_polyu\_hk/Documents/real-nerveseg2021sharefile/091810021113.zip?csf=1&amp;web=1&amp;e=sVyhQo
+[https://connectpolyu-my.sharepoint.com/:u:/g/personal/18041854r_connect_polyu_hk/EQYuqS-gtflNp3FM5xzjCJEBwiGCvN05ukLK72tGVwImUg?e=Wt5WuK]
 
-](https://connectpolyu-my.sharepoint.com/:u:/r/personal/18041854r_connect_polyu_hk/Documents/real-nerveseg2021sharefile/091810021113.zip?csf=1&amp;web=1&amp;e=sVyhQo)101611271211.zip can be downloaded here:
-[https://connectpolyu-my.sharepoint.com/:u:/r/personal/18041854r\_connect\_polyu\_hk/Documents/real-nerveseg2021sharefile/101611271211.zip?csf=1&amp;web=1&amp;e=JcAGkW
-
-](https://connectpolyu-my.sharepoint.com/:u:/r/personal/18041854r_connect_polyu_hk/Documents/real-nerveseg2021sharefile/101611271211.zip?csf=1&amp;web=1&amp;e=JcAGkW)
+101611271211.zip can be downloaded here:
+[https://connectpolyu-my.sharepoint.com/:u:/g/personal/18041854r_connect_polyu_hk/ETmoTe6sgsRIjgCG3bw_OUYBJuKP819Pd_8mpSxq7esUoA?e=UH0WRF]
 
 **Training**
 
@@ -127,21 +125,15 @@ No sample images are saved in evaluating training and validation datasets.
 
 The best weightings of each of the 5 models we studied that we obtained can be downloaded with the following links and decompressed into the folder &quot;/Classification/saved\_models/#modelname#/&quot; for loading for evaluation, where #modelname# is the name of the model.
 denseNET169018.zip
-[https://connectpolyu-my.sharepoint.com/:u:/r/personal/18041854r\_connect\_polyu\_hk/Documents/real-nerveseg2021sharefile/denseNET169018.zip?csf=1&amp;web=1&amp;e=DrNXgb
-
-](https://connectpolyu-my.sharepoint.com/:u:/r/personal/18041854r_connect_polyu_hk/Documents/real-nerveseg2021sharefile/denseNET169018.zip?csf=1&amp;web=1&amp;e=DrNXgb)denseNET201020.zip
-[https://connectpolyu-my.sharepoint.com/:u:/r/personal/18041854r\_connect\_polyu\_hk/Documents/real-nerveseg2021sharefile/denseNET201020.zip?csf=1&amp;web=1&amp;e=w3aaTA
-
-](https://connectpolyu-my.sharepoint.com/:u:/r/personal/18041854r_connect_polyu_hk/Documents/real-nerveseg2021sharefile/denseNET201020.zip?csf=1&amp;web=1&amp;e=w3aaTA)mobileNETv2020.zip
-[https://connectpolyu-my.sharepoint.com/:u:/r/personal/18041854r\_connect\_polyu\_hk/Documents/real-nerveseg2021sharefile/mobileNETv2020.zip?csf=1&amp;web=1&amp;e=IjqYNk
-
-](https://connectpolyu-my.sharepoint.com/:u:/r/personal/18041854r_connect_polyu_hk/Documents/real-nerveseg2021sharefile/mobileNETv2020.zip?csf=1&amp;web=1&amp;e=IjqYNk)resnet101v2017.zip
-[https://connectpolyu-my.sharepoint.com/:u:/r/personal/18041854r\_connect\_polyu\_hk/Documents/real-nerveseg2021sharefile/resnet101v2017.zip?csf=1&amp;web=1&amp;e=z6jHwP
-
-](https://connectpolyu-my.sharepoint.com/:u:/r/personal/18041854r_connect_polyu_hk/Documents/real-nerveseg2021sharefile/resnet101v2017.zip?csf=1&amp;web=1&amp;e=z6jHwP)resnet50v2024.zip
-[https://connectpolyu-my.sharepoint.com/:u:/r/personal/18041854r\_connect\_polyu\_hk/Documents/real-nerveseg2021sharefile/resnet50v2024.zip?csf=1&amp;web=1&amp;e=lZUBKa
-
-](https://connectpolyu-my.sharepoint.com/:u:/r/personal/18041854r_connect_polyu_hk/Documents/real-nerveseg2021sharefile/resnet50v2024.zip?csf=1&amp;web=1&amp;e=lZUBKa)
+[https://connectpolyu-my.sharepoint.com/:u:/g/personal/18041854r_connect_polyu_hk/EX37THnpcJ1FjCixPliY3IoB63B9ORR5j5kb9-IncaiqsA?e=CIapS8]
+denseNET201020.zip
+[https://connectpolyu-my.sharepoint.com/:u:/g/personal/18041854r_connect_polyu_hk/EdQEZ_DWgLNFtW3hC24_oAwBEYLAP2FehEYJmJPSAsvE5w?e=ef7LNd]
+mobileNETv2020.zip
+[https://connectpolyu-my.sharepoint.com/:u:/g/personal/18041854r_connect_polyu_hk/EWvFGn6DOjFKhOO00nJw33cBlZLXnzrsVcqJHtf4ES5aIw?e=MbQVzg]
+resnet101v2017.zip
+[https://connectpolyu-my.sharepoint.com/:u:/g/personal/18041854r_connect_polyu_hk/EcWLRuxQPLZPro_WXNmrZ6kBbwrWd3rWuckWvgftxlgRnA?e=7uXg4Q]
+resnet50v2024.zip
+[https://connectpolyu-my.sharepoint.com/:u:/g/personal/18041854r_connect_polyu_hk/EcnHlOWH2r1Fru52lfeDNkEBRXx9cPQNsW4NBsSnD9tVtg?e=1dfhq9]
 
 **Saved result files of Classification**
  The accuracy and loss metrics during the training process are plotted in the two file &quot;acc\_loss.png&quot; and &quot;acc\_loss\_after\_fine\_tuning.png&quot;. Files with the following patterns are also saved in the directory &quot;/classfication/#modelname#/&quot; : #modelname#\_train/val\_AUC/CM/F1.txt.
@@ -209,12 +201,9 @@ The script that convert all images into tfrecord format for training UNET.
 
 The subfolder &quot;/UNET/TFrecord&quot; is the default directory where the tfrecord datasets are placed for training and testing. For details, please refer to the section &quot;Preparation of dataset&quot;.
 Trainval.tfrecords can be downloaded here:
-[https://connectpolyu-my.sharepoint.com/:u:/r/personal/18041854r\_connect\_polyu\_hk/Documents/real-nerveseg2021sharefile/trainval.tfrecords?csf=1&amp;web=1&amp;e=jLgJuC
-
-](https://connectpolyu-my.sharepoint.com/:u:/r/personal/18041854r_connect_polyu_hk/Documents/real-nerveseg2021sharefile/trainval.tfrecords?csf=1&amp;web=1&amp;e=jLgJuC)test.tfrecords can be downloaded here:
-[https://connectpolyu-my.sharepoint.com/:u:/r/personal/18041854r\_connect\_polyu\_hk/Documents/real-nerveseg2021sharefile/test.tfrecords?csf=1&amp;web=1&amp;e=O0rhex
-
-](https://connectpolyu-my.sharepoint.com/:u:/r/personal/18041854r_connect_polyu_hk/Documents/real-nerveseg2021sharefile/test.tfrecords?csf=1&amp;web=1&amp;e=O0rhex)
+[https://connectpolyu-my.sharepoint.com/:u:/g/personal/18041854r_connect_polyu_hk/Ea05prqS4NdBjY4Z7o-z2tYBano3o99h9rwuoIRA8OG93A?e=CFaTZd]
+test.tfrecords can be downloaded here:
+[https://connectpolyu-my.sharepoint.com/:u:/g/personal/18041854r_connect_polyu_hk/Ee2QCANDCxNBqmjpI3e2F6oBlc4XfcA8cmpa_S9Ci9_EQA?e=MVJjNt]
 
 **Preparation of dataset**
 The annotated images should be in either &quot;.jpg&quot; or &quot;.png&quot; format. All images are converted into .tfrecord format before being loaded for training and inferencing.
@@ -274,8 +263,7 @@ In the remaining code of this script file, each images in the training and valid
 The result illustration for each of the images in the two dataset are plotted but not saved automatically. Users can save some of the representative images manually.
 
 The UNET mobileNETv2 feature extraction layers weightings that we trained can be downloaded and decompressed into &quot;/UNET/saved\_model/&quot; for loading for evaluation.
-[https://connectpolyu-my.sharepoint.com/:u:/r/personal/18041854r\_connect\_polyu\_hk/Documents/real-nerveseg2021sharefile/UNET\_mobileNETv2\_dp2\_e50.zip?csf=1&amp;web=1&amp;e=8uFgHH
-](https://connectpolyu-my.sharepoint.com/:u:/r/personal/18041854r_connect_polyu_hk/Documents/real-nerveseg2021sharefile/UNET_mobileNETv2_dp2_e50.zip?csf=1&amp;web=1&amp;e=8uFgHH)
+[https://connectpolyu-my.sharepoint.com/:u:/g/personal/18041854r_connect_polyu_hk/Efdx4LB-X45Dp3BJ9piLZmIBtb8Ih9kQk1d3W-TNEgJmMw?e=51qtRy]
 
 **Evaluation of the test dataset**
 Please run the &quot; **/UNET/Evaluation.ipynb**&quot; for evaluating an independent test dataset.
@@ -309,7 +297,7 @@ This script was based on the code from [https://github.com/tensorflow/models/tre
 
 **Data**
 
-Stereoscopic images of the murine nerve transection process were used as demonstration. Sample data can be downloaded from [https://connectpolyu-my.sharepoint.com/:u:/r/personal/18041854r\_connect\_polyu\_hk/Documents/real-nerveseg2021sharefile/dataset\_deeplab.rar?csf=1&amp;web=1&amp;e=BMMoao](https://connectpolyu-my.sharepoint.com/:u:/r/personal/18041854r_connect_polyu_hk/Documents/real-nerveseg2021sharefile/dataset_deeplab.rar?csf=1&amp;web=1&amp;e=BMMoao)
+Stereoscopic images of the murine nerve transection process were used as demonstration. Sample data can be downloaded from [https://connectpolyu-my.sharepoint.com/:u:/g/personal/18041854r_connect_polyu_hk/EUMYzOcEnUlHh8JSxkzkDcIB0bcDzd2UNTuUaLf67RBKSQ?e=RE31Zm]
 
 Please refer to the &#39;datasets\example\_data folder to see the data format.
 
@@ -369,7 +357,7 @@ This script was based on the code from [https://github.com/DebeshJha/2020-CBMS-D
 
 Stereoscopic images of the murine nerve transection process were used as demonstration. Please refer to the &#39;data&#39; folder to see the data format.
 
-**Under &#39;\doubleunet\data\[dataset-group]\&#39; is where you should place your data. Data can be downloaded from** [**https://connectpolyu-my.sharepoint.com/:u:/r/personal/18041854r\_connect\_polyu\_hk/Documents/real-nerveseg2021sharefile/data\_doubleunet.rar?csf=1&amp;web=1&amp;e=EqQvqP**](https://connectpolyu-my.sharepoint.com/:u:/r/personal/18041854r_connect_polyu_hk/Documents/real-nerveseg2021sharefile/data_doubleunet.rar?csf=1&amp;web=1&amp;e=EqQvqP)
+**Under &#39;\doubleunet\data\[dataset-group]\&#39; is where you should place your data. Data can be downloaded from** [https://connectpolyu-my.sharepoint.com/:u:/g/personal/18041854r_connect_polyu_hk/EUNP3qv0-DBLmBFVunvfoesB_Wj-eU84gB-ZbDgpM_Kf4g?e=9bOteK]
 
 Structure of dataset folder:
 
@@ -388,8 +376,7 @@ Remember to process your images with &#39;\doubleunet\from1to255.ipynb&#39; befo
 
 Change &#39;test\_path&#39; variable in \doubleunet\predict.ipynb and \doubleunet\train.ipynb to your data folder path.
 
-Change &#39;model\_path&#39; variable in \doubleunet\train.ipynb to your desired pre-trained weight path. Our trained weight is [https://connectpolyu-my.sharepoint.com/:u:/r/personal/18041854r\_connect\_polyu\_hk/Documents/real-nerveseg2021sharefile/5videos\_20\_da5\_finetune.h5?csf=1&amp;web=1&amp;e=hV0y6s
-](https://connectpolyu-my.sharepoint.com/:u:/r/personal/18041854r_connect_polyu_hk/Documents/real-nerveseg2021sharefile/5videos_20_da5_finetune.h5?csf=1&amp;web=1&amp;e=hV0y6s)Change &#39;model&#39; variable in \doubleunet\predict.ipynb to your model file path.
+Change &#39;model\_path&#39; variable in \doubleunet\train.ipynb to your desired pre-trained weight path. Our trained weight is [https://connectpolyu-my.sharepoint.com/:u:/g/personal/18041854r_connect_polyu_hk/EfdiIKHCYa9Bj6CnmmP8ltEBH62-0cM7gmeob31XwPLObA?e=IiGlMf] Change &#39;model&#39; variable in \doubleunet\predict.ipynb to your model file path.
 
 Run \doubleunet\train.ipynb to train DoubleUNet with your dataset. The model file .h5 will be generated in root folder.
 
@@ -411,7 +398,7 @@ Environment can be set up by running pip install -r requirements.txt.
 
 **Data**
 
-Stereoscopic images of the murine nerve transection process were used as demonstration. &#39;/linked/example\_data&#39; folder has been created to demonstrate the architecture of data. It can be downloaded here [https://connectpolyu-my.sharepoint.com/:u:/r/personal/18041854r\_connect\_polyu\_hk/Documents/real-nerveseg2021sharefile/linked\_example\_data.rar?csf=1&amp;web=1&amp;e=KQTbsj](https://connectpolyu-my.sharepoint.com/:u:/r/personal/18041854r_connect_polyu_hk/Documents/real-nerveseg2021sharefile/linked_example_data.rar?csf=1&amp;web=1&amp;e=KQTbsj)
+Stereoscopic images of the murine nerve transection process were used as demonstration. &#39;/linked/example\_data&#39; folder has been created to demonstrate the architecture of data. It can be downloaded here [https://connectpolyu-my.sharepoint.com/:u:/g/personal/18041854r_connect_polyu_hk/EUoh39Kb77hHokzKq5CbY-IBFQ2hnrgSX2RnJOVR4baXBg?e=jqUb1f]
 
 Structure of a data folder:
 
