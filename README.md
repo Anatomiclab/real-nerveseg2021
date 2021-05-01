@@ -1,25 +1,26 @@
-# real-nerveseg2021
+**real-nerveseg2021**
+
 _Authors:_ Lai Wing Sum, Lee Fung Lui, Man Yin Ting Eunice, Wong Chin Hung, Yeung Chi Kin, WONG, Alex Ngai Nick
 
-# Introduction
+**Introduction**
 
-Complications that resulted in life-long irreversible nerve damages are seldom accompanied with certain types of surgery such as oesophageal surgery, these complications often resultts in functional loss and lifelong dependency in medications. The chance of causing these complications are highly dependent on experiences of surgeons, this implied that there is room of improvement by the use of real-time intraoperative imaging techniques.
+Complications that resulted in life-long irreversible nerve damages are seldom accompanied with certain types of surgery such as esophageal surgery, these complications often result in functional loss and lifelong dependency in medications. The chance of causing these complications is highly dependent on experiences of surgeons, this implied that there is room of improvement by the use of real-time intraoperative imaging techniques.
 
 Myelin layers of nerve has a special optical property where reflectance is directly dependent on wavelength and amount of reflected light is highly correlated to the number of myelin layer of nerve. By carefully choosing suitable wavelength, the nerve will reflect significantly more light than the surrounding non-nerve tissue. This can be used to produce high contrast images that highlight nerve.
 
 In this project, we developed a deep learning model that aims at real time identification of nerve during surgical procedures. The models consist of two convolutional neural network that classify images that contains nerve and segment nerve.
 
-A powerful neural network that classify objects with very high accuracy requires very large training dataset and training time. Existing powerful pre-trained classification neural network can be augmented for classifying medical images such as nerve by transfer learning.
+A powerful neural network that classifies objects with very high accuracy requires very large training dataset and training time. Existing powerful pre-trained classification neural network can be augmented for classifying medical images such as nerve by transfer learning.
 
-# File structure of this deposit
+**File structure of this deposit**
 
 This deposit is divided into 5 subfolders that their contents are described in their names.
-The classification training and evaluation scripts are contained in the subfolder &quot;classification&quot;. The segmentations are divided by their models into their own folders, &quot;UNET&quot;, &quot;doubleunet&quot;, &quot;deeplabV3+&quot;.
+The classification training and evaluation scripts are contained in the subfolder &quot;classification&quot;. The segmentations are divided by their models into their own folders, &quot;UNET&quot;, &quot;DoubleUNET&quot;, &quot;deeplabV3+&quot;.
 The root directory contained this readme file.
 
-# Classification
+**Classification**
 
-This folder contains the script for training transfer learnt classification neural network using the pre-trained imagenet image classification.
+This folder contains the script for training transfer learnt classification neural network using the pre-trained ImageNet image classification.
 
 Getting started
 Dependencies
@@ -29,7 +30,7 @@ numpy 1.18
 sklearn 0.23
 These dependencies can be installed using pip install
 
-Data and models
+**Data and models**
 
 The classification neural networks were built on weights pre-trained with ImageNET available in Keras Application by transfer learning. ImageNET is an image database with number of images for each kind of objects. Further information can be found here:
 [http://image-net.org/
@@ -40,7 +41,8 @@ Resnet50v2
 Resnet101v2
 mobilenetv2
 
-Code
+**Code**
+
 Sources
 The majority of the training code comes from tensorflow&#39;s guide to transfer learning and fine-tuning, the guide can be found here:
 [https://www.tensorflow.org/tutorials/images/transfer\_learning
@@ -50,14 +52,23 @@ The majority of the training code comes from tensorflow&#39;s guide to transfer 
 The images in the datasets are manually divided into &quot;training and validation&quot; and &quot;testing&quot; folder, each folder contained images from experiment on some particular dates. Each folder contains three sub-folder which corresponds to the three classes that the images are being classified into (nerve, opening wound, tendon). These images are in jpg format.
 During the training process, the images in the &quot;training and validation&quot; dataset is read by tensorflow function and automatically shuffled and divided into training and validation datasets in 8:2 ratio.
 
-Training
+The default location for the datasets are the subfolder &quot;/Classification/datasets/&quot;. The images has been compressed into a zip file for download, they should be decompressed before use.
+091810021113.zip can be downloaded here:
+[https://connectpolyu-my.sharepoint.com/:u:/r/personal/18041854r\_connect\_polyu\_hk/Documents/real-nerveseg2021sharefile/091810021113.zip?csf=1&amp;web=1&amp;e=sVyhQo
+
+](https://connectpolyu-my.sharepoint.com/:u:/r/personal/18041854r_connect_polyu_hk/Documents/real-nerveseg2021sharefile/091810021113.zip?csf=1&amp;web=1&amp;e=sVyhQo)101611271211.zip can be downloaded here:
+[https://connectpolyu-my.sharepoint.com/:u:/r/personal/18041854r\_connect\_polyu\_hk/Documents/real-nerveseg2021sharefile/101611271211.zip?csf=1&amp;web=1&amp;e=JcAGkW
+
+](https://connectpolyu-my.sharepoint.com/:u:/r/personal/18041854r_connect_polyu_hk/Documents/real-nerveseg2021sharefile/101611271211.zip?csf=1&amp;web=1&amp;e=JcAGkW)
+
+**Training**
 
 The scripts for training neural network using pre-trained weighting of the following models are included:
  densenet169, densenet201, mobilenet v2, resnet50v2, renset101v2.
 The file names of these Python scripts are named in the following patterns:
-**/classification/train\_{ModelName}.py** , where {ModelName} are the names of the models.
+**/classification/train\_#ModelName#.py** , where #ModelName# are the names of the models.
 
-**Defining variable parameters for the training script** s
+**Defining variable parameters for the training scripts**
 At the beginning of the code, the training parameters, dataset path and path for saving results and trained weighting are defined. The default parameters for resnet152v2 are listed below as example:
 
 #define parameters
@@ -114,7 +125,25 @@ The datasets should be read without shuffling to obtain the same set of output s
 
 No sample images are saved in evaluating training and validation datasets.
 
-Saved result files of Classification
+The best weightings of each of the 5 models we studied that we obtained can be downloaded with the following links and decompressed into the folder &quot;/Classification/saved\_models/#modelname#/&quot; for loading for evaluation, where #modelname# is the name of the model.
+denseNET169018.zip
+[https://connectpolyu-my.sharepoint.com/:u:/r/personal/18041854r\_connect\_polyu\_hk/Documents/real-nerveseg2021sharefile/denseNET169018.zip?csf=1&amp;web=1&amp;e=DrNXgb
+
+](https://connectpolyu-my.sharepoint.com/:u:/r/personal/18041854r_connect_polyu_hk/Documents/real-nerveseg2021sharefile/denseNET169018.zip?csf=1&amp;web=1&amp;e=DrNXgb)denseNET201020.zip
+[https://connectpolyu-my.sharepoint.com/:u:/r/personal/18041854r\_connect\_polyu\_hk/Documents/real-nerveseg2021sharefile/denseNET201020.zip?csf=1&amp;web=1&amp;e=w3aaTA
+
+](https://connectpolyu-my.sharepoint.com/:u:/r/personal/18041854r_connect_polyu_hk/Documents/real-nerveseg2021sharefile/denseNET201020.zip?csf=1&amp;web=1&amp;e=w3aaTA)mobileNETv2020.zip
+[https://connectpolyu-my.sharepoint.com/:u:/r/personal/18041854r\_connect\_polyu\_hk/Documents/real-nerveseg2021sharefile/mobileNETv2020.zip?csf=1&amp;web=1&amp;e=IjqYNk
+
+](https://connectpolyu-my.sharepoint.com/:u:/r/personal/18041854r_connect_polyu_hk/Documents/real-nerveseg2021sharefile/mobileNETv2020.zip?csf=1&amp;web=1&amp;e=IjqYNk)resnet101v2017.zip
+[https://connectpolyu-my.sharepoint.com/:u:/r/personal/18041854r\_connect\_polyu\_hk/Documents/real-nerveseg2021sharefile/resnet101v2017.zip?csf=1&amp;web=1&amp;e=z6jHwP
+
+](https://connectpolyu-my.sharepoint.com/:u:/r/personal/18041854r_connect_polyu_hk/Documents/real-nerveseg2021sharefile/resnet101v2017.zip?csf=1&amp;web=1&amp;e=z6jHwP)resnet50v2024.zip
+[https://connectpolyu-my.sharepoint.com/:u:/r/personal/18041854r\_connect\_polyu\_hk/Documents/real-nerveseg2021sharefile/resnet50v2024.zip?csf=1&amp;web=1&amp;e=lZUBKa
+
+](https://connectpolyu-my.sharepoint.com/:u:/r/personal/18041854r_connect_polyu_hk/Documents/real-nerveseg2021sharefile/resnet50v2024.zip?csf=1&amp;web=1&amp;e=lZUBKa)
+
+**Saved result files of Classification**
  The accuracy and loss metrics during the training process are plotted in the two file &quot;acc\_loss.png&quot; and &quot;acc\_loss\_after\_fine\_tuning.png&quot;. Files with the following patterns are also saved in the directory &quot;/classfication/#modelname#/&quot; : #modelname#\_train/val\_AUC/CM/F1.txt.
  These files are results of evaluating the training and validation dataset immediately after training the weighting. AUC stands for area under curve figure, CM stands for confusion matrix and F1 is the files that contained the TPR, NPV, MCC, accuracy...etc figure.
 
@@ -122,11 +151,11 @@ Files with similar patterns are also saved in the process of evaluating the inde
 Sample images are also generated with the following file naming pattern:
 model name + nos+ Correct/Wrong+TruthLabel+PredictedClass+batch number+#n image of that batch.png. For example, the name &quot;denseNET201020Wrongnerveopening wound12931.png&quot; mean #020 weighting of denseNET201 wrong prediction with truth label of nerve predicted as opening wound and the image come from 129th batch of images and the #31 image in that batch counting from zero.
 
-Manual work after training
+**Manual work after training**
 
 After each instance of training of classification models, a folder with custom name should be manually created at the directory of &quot;/classification/#modelname#/&quot; and all metrics files generated in the training and evaluation of training and validation process should be manually moved to that folder. Afterwards, the folder &quot;/classification/#modelname#/saved\_model/ current &quot; where the trained weighting is saved should be renamed with custom name and moved to the directory &quot;/classification/saved\_models/#modelname#/&quot; manually.
 
-Segmentation
+**Segmentation**
 
 Segmentation model data preparation
 
@@ -137,16 +166,19 @@ The flow of annotation:
 [https://drive.google.com/file/d/1AIUffwzkgLgl4T8wHCxGJRc9Y2S\_ClrP/view?usp=sharing](https://drive.google.com/file/d/1AIUffwzkgLgl4T8wHCxGJRc9Y2S_ClrP/view?usp=sharing)
 
 Example of annotation:
-
-![](RackMultipart20210417-4-uvlbxm_html_561d4f94fdcf579c.png)
-
+![alt text](https://i.imgur.com/vf8bS8Q.png)
 After annotation, download the datasets as follows:
 
-![](RackMultipart20210417-4-uvlbxm_html_dd5e38880ca8e803.png)
-
+![alt text](https://i.imgur.com/Pgurz5M.png)
 Unzip the downloaded tar file, 4 folders can be found. They are &quot;ann&quot;, &quot;img&quot;, &quot;masks\_human&quot; and &quot;masks\_machine&quot; respectively. Only &quot;img&quot; and &quot;masks\_machine&quot; are used for the model training as &quot;img&quot; folder store all the raw images and &quot;masks\_machine&quot; folder store all the annotation masks.
 
-# UNET
+After annotation, image is cropped to get rid of the overexposure part and then resized to 512x512 using python script &quot;cropLeftOnly-1080To512.py&quot; under your data folder. The figure below demonstrates before and after cropping of input image.
+
+![](RackMultipart20210501-4-1h2cyox_html_954dc3cccfabd7bc.jpg) ![](RackMultipart20210501-4-1h2cyox_html_d473f29f2dd46f13.png)
+
+_Before and after cropping of input image._
+
+UNET
 
 Getting started
 Dependencies
@@ -157,8 +189,8 @@ skimage 0.18
 
 These dependencies can be installed using pip install
 
-Code
-Sources
+**Code**
+**Sources**
 The majority of the training code comes from tensorflow&#39;s official guide for image segmentation, the sources can be found here:
 [https://www.tensorflow.org/tutorials/images/segmentation
 ](https://www.tensorflow.org/tutorials/images/segmentation)the majority of the original code is comprehended and modified by Marco Lee.
@@ -174,6 +206,15 @@ The script that load the trained UNET weighting and to evaluate it with test dat
 The script that resize convert all .jpg and .png files in the same directory.
 &quot;/UNET/image-to-tfrecord-Marco\_dataset.ipynb&quot;
 The script that convert all images into tfrecord format for training UNET.
+
+The subfolder &quot;/UNET/TFrecord&quot; is the default directory where the tfrecord datasets are placed for training and testing. For details, please refer to the section &quot;Preparation of dataset&quot;.
+Trainval.tfrecords can be downloaded here:
+[https://connectpolyu-my.sharepoint.com/:u:/r/personal/18041854r\_connect\_polyu\_hk/Documents/real-nerveseg2021sharefile/trainval.tfrecords?csf=1&amp;web=1&amp;e=jLgJuC
+
+](https://connectpolyu-my.sharepoint.com/:u:/r/personal/18041854r_connect_polyu_hk/Documents/real-nerveseg2021sharefile/trainval.tfrecords?csf=1&amp;web=1&amp;e=jLgJuC)test.tfrecords can be downloaded here:
+[https://connectpolyu-my.sharepoint.com/:u:/r/personal/18041854r\_connect\_polyu\_hk/Documents/real-nerveseg2021sharefile/test.tfrecords?csf=1&amp;web=1&amp;e=O0rhex
+
+](https://connectpolyu-my.sharepoint.com/:u:/r/personal/18041854r_connect_polyu_hk/Documents/real-nerveseg2021sharefile/test.tfrecords?csf=1&amp;web=1&amp;e=O0rhex)
 
 **Preparation of dataset**
 The annotated images should be in either &quot;.jpg&quot; or &quot;.png&quot; format. All images are converted into .tfrecord format before being loaded for training and inferencing.
@@ -197,6 +238,7 @@ DeeplabV3+ also share similar data structure and preparation of data in deeplabV
 The script &quot; **/UNET/ segmentation-modified-dataset-and-usePretrained-Share.ipynb**&quot; is the main script that is used to train the UNET segmentation weightings and evaluate the training and validation dataset.
 
 At the beginning of the code, the various parameters are defined.
+
 OrgSize
 processedSize
 raw\_image\_dataset
@@ -204,6 +246,7 @@ dp
 EPOCHS
 learning\_rate
 Mname
+
 Since UNET accept only image size of 224x224, the original size of the image and target size for resizing (orgSize, processedSize) are input for defining how the images are resized. raw\_image\_dataset defines the absolute datapath to which the tfrecord file are read.
 Dp defines the dropout rate in the training process.
 EPOCHS defines the number of epochs for training.
@@ -230,6 +273,10 @@ Since the training and validation dataset are generated every time just before t
 In the remaining code of this script file, each images in the training and validation dataset are evaluated by the trained weighting. The IOU and dice coefficient for each images are calculated and saved temporarily in python list. The python list with the IOU and dice coefficient of the whole training and validation datasets are used to calculate the statistically result (mean, standard error of mean, 95% confidence interval) for the respective dataset in this instance. The statistical result is saved in the file &quot;saved\_model/#Mname#/TrainValResult.txt&quot;
 The result illustration for each of the images in the two dataset are plotted but not saved automatically. Users can save some of the representative images manually.
 
+The UNET mobileNETv2 feature extraction layers weightings that we trained can be downloaded and decompressed into &quot;/UNET/saved\_model/&quot; for loading for evaluation.
+[https://connectpolyu-my.sharepoint.com/:u:/r/personal/18041854r\_connect\_polyu\_hk/Documents/real-nerveseg2021sharefile/UNET\_mobileNETv2\_dp2\_e50.zip?csf=1&amp;web=1&amp;e=8uFgHH
+](https://connectpolyu-my.sharepoint.com/:u:/r/personal/18041854r_connect_polyu_hk/Documents/real-nerveseg2021sharefile/UNET_mobileNETv2_dp2_e50.zip?csf=1&amp;web=1&amp;e=8uFgHH)
+
 **Evaluation of the test dataset**
 Please run the &quot; **/UNET/Evaluation.ipynb**&quot; for evaluating an independent test dataset.
 The evaluation process is similar to that in evaluating the training and validation dataset in the &quot;/UNET/segmentation-modified-dataset-and-usePretrained-Share.ipynb&quot;
@@ -246,23 +293,25 @@ The results are saved in the file &quot;saved\_model/#Mname#/evaluation.txt&quot
 
 This is DeepLabv3+ with parameters tuned to suit our training of segmentation of nerve images.
 
-![](RackMultipart20210417-4-uvlbxm_html_3250f920c94fe518.gif)
+![](RackMultipart20210501-4-1h2cyox_html_3250f920c94fe518.gif)
 
 **Requirement**
 
 Refer to [https://github.com/tensorflow/models/blob/master/research/deeplab/g3doc/installation.md](https://github.com/tensorflow/models/blob/master/research/deeplab/g3doc/installation.md)
 
-![](RackMultipart20210417-4-uvlbxm_html_3250f920c94fe518.gif)
+![](RackMultipart20210501-4-1h2cyox_html_3250f920c94fe518.gif)
 
 **Source**
 
 This script was based on the code from [https://github.com/tensorflow/models/tree/master/research/deeplab](https://github.com/tensorflow/models/tree/master/research/deeplab).
 
-![](RackMultipart20210417-4-uvlbxm_html_3250f920c94fe518.gif)
+![](RackMultipart20210501-4-1h2cyox_html_3250f920c94fe518.gif)
 
 **Data**
 
-Stereoscopic images of the murine nerve transection process were used as demonstration. Please refer to the &#39;datasets\example\_data folder to see the data format.
+Stereoscopic images of the murine nerve transection process were used as demonstration. Sample data can be downloaded from [https://connectpolyu-my.sharepoint.com/:u:/r/personal/18041854r\_connect\_polyu\_hk/Documents/real-nerveseg2021sharefile/dataset\_deeplab.rar?csf=1&amp;web=1&amp;e=BMMoao](https://connectpolyu-my.sharepoint.com/:u:/r/personal/18041854r_connect_polyu_hk/Documents/real-nerveseg2021sharefile/dataset_deeplab.rar?csf=1&amp;web=1&amp;e=BMMoao)
+
+Please refer to the &#39;datasets\example\_data folder to see the data format.
 
 **Under &#39;\deeplabV3+\datasets\example\_data\dataset&#39; is where you should place your data.**
 
@@ -278,7 +327,7 @@ To use your customized data, follow the data format in example\_data.
 
 After placing your data, change &#39;WORK\_DIR&#39; variable in &#39;/deeplabV3+/datasets/convert\_example.sh&#39; to your folder name. Then run &#39;convert\_example.sh&#39; to convert your data to tfrecord format.
 
-![](RackMultipart20210417-4-uvlbxm_html_3250f920c94fe518.gif)
+![](RackMultipart20210501-4-1h2cyox_html_3250f920c94fe518.gif)
 
 **Use**
 
@@ -294,7 +343,7 @@ Remember to change the &#39;PQR\_FOLDER&#39; variable in all these above mention
 
 Please refer to [https://github.com/tensorflow/models/tree/master/research/deeplab](https://github.com/tensorflow/models/tree/master/research/deeplab) for more instruction.
 
-![](RackMultipart20210417-4-uvlbxm_html_3250f920c94fe518.gif)
+![](RackMultipart20210501-4-1h2cyox_html_3250f920c94fe518.gif)
 
 **DoubleUNet segmentation model**
 
@@ -302,25 +351,25 @@ Please refer to [https://github.com/tensorflow/models/tree/master/research/deepl
 
 This is DoubleUNet with parameters tuned to suit our training of segmentation of nerve images.
 
-![](RackMultipart20210417-4-uvlbxm_html_3250f920c94fe518.gif)
+![](RackMultipart20210501-4-1h2cyox_html_3250f920c94fe518.gif)
 
 **Requirement**
 
 Refer to [https://github.com/DebeshJha/2020-CBMS-DoubleU-Net](https://github.com/DebeshJha/2020-CBMS-DoubleU-Net)
 
-![](RackMultipart20210417-4-uvlbxm_html_3250f920c94fe518.gif)
+![](RackMultipart20210501-4-1h2cyox_html_3250f920c94fe518.gif)
 
 **Source**
 
 This script was based on the code from [https://github.com/DebeshJha/2020-CBMS-DoubleU-Net](https://github.com/DebeshJha/2020-CBMS-DoubleU-Net)
 
-![](RackMultipart20210417-4-uvlbxm_html_3250f920c94fe518.gif)
+![](RackMultipart20210501-4-1h2cyox_html_3250f920c94fe518.gif)
 
 **Data**
 
 Stereoscopic images of the murine nerve transection process were used as demonstration. Please refer to the &#39;data&#39; folder to see the data format.
 
-**Under &#39;\doubleunet\data\[dataset-group]\&#39; is where you should place your data.**
+**Under &#39;\doubleunet\data\[dataset-group]\&#39; is where you should place your data. Data can be downloaded from** [**https://connectpolyu-my.sharepoint.com/:u:/r/personal/18041854r\_connect\_polyu\_hk/Documents/real-nerveseg2021sharefile/data\_doubleunet.rar?csf=1&amp;web=1&amp;e=EqQvqP**](https://connectpolyu-my.sharepoint.com/:u:/r/personal/18041854r_connect_polyu_hk/Documents/real-nerveseg2021sharefile/data_doubleunet.rar?csf=1&amp;web=1&amp;e=EqQvqP)
 
 Structure of dataset folder:
 
@@ -333,20 +382,20 @@ To use your customized data, follow the data format in the folder.
 
 Remember to process your images with &#39;\doubleunet\from1to255.ipynb&#39; before actually running the model.
 
-![](RackMultipart20210417-4-uvlbxm_html_3250f920c94fe518.gif)
+![](RackMultipart20210501-4-1h2cyox_html_3250f920c94fe518.gif)
 
 **Use**
 
 Change &#39;test\_path&#39; variable in \doubleunet\predict.ipynb and \doubleunet\train.ipynb to your data folder path.
 
-Change &#39;model\_path&#39; variable in \doubleunet\train.ipynb to your desired pre-trained weight path.
- Change &#39;model&#39; variable in \doubleunet\predict.ipynb to your model file path.
+Change &#39;model\_path&#39; variable in \doubleunet\train.ipynb to your desired pre-trained weight path. Our trained weight is [https://connectpolyu-my.sharepoint.com/:u:/r/personal/18041854r\_connect\_polyu\_hk/Documents/real-nerveseg2021sharefile/5videos\_20\_da5\_finetune.h5?csf=1&amp;web=1&amp;e=hV0y6s
+](https://connectpolyu-my.sharepoint.com/:u:/r/personal/18041854r_connect_polyu_hk/Documents/real-nerveseg2021sharefile/5videos_20_da5_finetune.h5?csf=1&amp;web=1&amp;e=hV0y6s)Change &#39;model&#39; variable in \doubleunet\predict.ipynb to your model file path.
 
 Run \doubleunet\train.ipynb to train DoubleUNet with your dataset. The model file .h5 will be generated in root folder.
 
 Run \doubleunet\predict.ipynb to predict masks of your dataset.
 
-![](RackMultipart20210417-4-uvlbxm_html_3250f920c94fe518.gif)
+![](RackMultipart20210501-4-1h2cyox_html_3250f920c94fe518.gif)
 
 **Real time nerve segmentation tool (Reduced framerate)**
 
@@ -362,7 +411,7 @@ Environment can be set up by running pip install -r requirements.txt.
 
 **Data**
 
-Stereoscopic images of the murine nerve transection process were used as demonstration. &#39;/linked/example\_data&#39; folder has been created to demonstrate the architecture of data.
+Stereoscopic images of the murine nerve transection process were used as demonstration. &#39;/linked/example\_data&#39; folder has been created to demonstrate the architecture of data. It can be downloaded here [https://connectpolyu-my.sharepoint.com/:u:/r/personal/18041854r\_connect\_polyu\_hk/Documents/real-nerveseg2021sharefile/linked\_example\_data.rar?csf=1&amp;web=1&amp;e=KQTbsj](https://connectpolyu-my.sharepoint.com/:u:/r/personal/18041854r_connect_polyu_hk/Documents/real-nerveseg2021sharefile/linked_example_data.rar?csf=1&amp;web=1&amp;e=KQTbsj)
 
 Structure of a data folder:
 
@@ -394,13 +443,13 @@ Run linked.ipynb and go to &#39;output&#39; subfolder to see model result.
 
 1. Output image when the predicted label is &#39;Nerve&#39;:
 
-![](RackMultipart20210417-4-uvlbxm_html_314119f520f3565.png)
+![alt text](https://i.imgur.com/QycSTR3.png)
 
 The green area represents the predicted mask. In the top-right corner, the predicted label by classification model, the process time for the image, and the IOU value for the segmentation prediction are shown.
 
 1. Output image when the predicted label is not &#39;Nerve&#39;:
 
-![](RackMultipart20210417-4-uvlbxm_html_6a57ce98e5e78db4.png)
+![alt text](https://i.imgur.com/smwnjrl.png)
 
 As the classification model does not predict it as &#39;Nerve&#39;, it will not get fed into the segmentation model. No mask is generated.
 
