@@ -1,6 +1,6 @@
 **real-nerveseg2021**
 
-_Authors:_ Lai Wing Sum, Lee Fung Lui, Man Yin Ting Eunice, Wong Chin Hung, Yeung Chi Kin, WONG, Ngai Nick Alex Wong
+_Authors:_ Lai Wing Sum, Lee Fung Lui, Man Yin Ting Eunice, Wong Chin Hung, Yeung Chi Kin, WONG, Ngai Nick Alex
 
 **Introduction**
 
