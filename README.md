@@ -155,13 +155,16 @@ Since segmentation model is only trained by nerve images, all nerve images are c
 
 The flow of annotation:
 
-[https://drive.google.com/file/d/1AIUffwzkgLgl4T8wHCxGJRc9Y2S\_ClrP/view?usp=sharing](https://drive.google.com/file/d/1AIUffwzkgLgl4T8wHCxGJRc9Y2S_ClrP/view?usp=sharing)
+please refer to flow of annotation.mp4
 
 Example of annotation:
+
 ![alt text](https://i.imgur.com/vf8bS8Q.png)
+
 After annotation, download the datasets as follows:
 
 ![alt text](https://i.imgur.com/Pgurz5M.png)
+
 Unzip the downloaded tar file, 4 folders can be found. They are &quot;ann&quot;, &quot;img&quot;, &quot;masks\_human&quot; and &quot;masks\_machine&quot; respectively. Only &quot;img&quot; and &quot;masks\_machine&quot; are used for the model training as &quot;img&quot; folder store all the raw images and &quot;masks\_machine&quot; folder store all the annotation masks.
 
 After annotation, image is cropped to get rid of the overexposure part and then resized to 512x512 using python script &quot;cropLeftOnly-1080To512.py&quot; under your data folder. The figure below demonstrates before and after cropping of input image.
