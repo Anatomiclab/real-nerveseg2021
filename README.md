@@ -332,6 +332,8 @@ Run &#39;/deeplabV3+/ eval-fyp.sh&#39; to see the IOU result of your data.
 
 Remember to change the &#39;PQR\_FOLDER&#39; variable in all these above mentioned with .sh scripts to your data folder name.
 
+Our trained weight file can be downloaded here [https://connectpolyu-my.sharepoint.com/:u:/r/personal/18041854r_connect_polyu_hk/Documents/real-nerveseg2021sharefile/deeplab_weight.rar?csf=1&web=1&e=dePsp1]
+
 Please refer to [https://github.com/tensorflow/models/tree/master/research/deeplab](https://github.com/tensorflow/models/tree/master/research/deeplab) for more instruction.
 
 ![](RackMultipart20210501-4-1h2cyox_html_3250f920c94fe518.gif)
